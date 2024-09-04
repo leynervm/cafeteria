@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.span-default {
+    @apply text-sm bg-fondospan text-textospan font-bold rounded p-1
+}
+
+.form-control {
+    @apply bg-transparent outline-none border-0 border-b text-textoprincipal text-xs border-gray-300 p-2.5 focus:ring-0 focus:border-gray-400
+}
+
+.form-control option {
+    @apply text-neutral-700;
+}
+
+.button {
+    @apply rounded-sm p-2.5 font-semibold text-xs disabled:opacity-25 disabled:ring-0 disabled:ring-transparent transition-all ease-in-out duration-150
+}
+
+@import url(estilos.css);

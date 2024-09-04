@@ -1,0 +1,83 @@
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/sweetAlert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Styles -->
+    @livewireStyles
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('assets/sweetAlert2/sweetalert2.all.min.js') }}"></script>
+
+
+
+
+
+public function sweet()
+    {
+        $this->dispatchBrowserEvent('mostrar_alerta');
+    }
+
+
+
+@section('scripts')
+    <script>
+        window.addEventListener('mostrar_alerta', event => {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            // Toast.fire({
+            //     icon: 'success',
+            //     title: 'Eliminado correctamente'
+            // })
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'question',
+                showClass: {
+                    popup: 'animate__animated animate__backInLeft'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__backOutRight'
+                },
+                showCancelButton: true,
+                allowOutsideClick: false,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                allowEscapeKey: false,
+
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Swal.fire({
+                    //     title: 'Eliminado correctamente',
+                    //     text: "Your file has been deleted.",
+                    //     icon: 'success',
+                    //     allowOutsideClick: false,
+                    //     showConfirmButton: false,
+                    //     timer: 1500
+                    // })
+
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Eliminado correctamente'
+                    })
+
+                }
+            })
+
+        })
+    </script>
+@endsection

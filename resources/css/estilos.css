@@ -1,0 +1,135 @@
+.theme-default {
+    --color-background-principal: theme("colors.gray.50");
+    --color-texto-principal: theme("colors.gray.600");
+
+    --bg-navlink: theme("colors.gray.200");
+    --color-navlink: theme("colors.gray.700");
+    --hoverbg-navlink: theme("colors.gray.300");
+    --hovercolor-navlink: theme("colors.gray.900");
+    --ring-navlink: theme("colors.gray.300");
+
+    --color-boton-lg: theme("colors.white");
+    --color-hoverboton-lg: theme("colors.gray.100");
+    --color-textoboton-lg: theme("colors.gray.600");
+    --color-fondotextoboton-lg: theme("colors.white");
+
+    --color-fondo-titulo: theme("colors.gray.200");
+    --color-texto-titulo: theme("colors.gray.600");
+
+    --color-fondo-span: theme("colors.gray.200");
+    --color-texto-span: theme("colors.gray.600");
+
+    --color-fondo-boton: theme("colors.gray.300");
+    --color-hover-boton: theme("colors.gray.500");
+    --color-hover-textoboton: theme("colors.white");
+    --color-texto-boton: theme("colors.gray.700");
+    --color-ring-boton: theme("colors.gray.300");
+
+    --color-checkbox: theme("colors.gray.500");
+
+    --bg-header-tabla: theme("colors.gray.200");
+    --color-header-tabla: theme("colors.gray.700");
+    --bg-fondo-tabla: theme("colors.white");
+    --color-texto-tabla: theme("colors.gray.700");
+    --bg-hover-tabla: theme("colors.gray.100");
+    --color-hover-tabla: theme("colors.neutral.700");
+
+    --color-fondo-botoncar: theme("colors.yellow.500");
+    --color-hover-botoncar: theme("colors.yellow.700");
+    --color-texto-botoncar: theme("colors.gray.100");
+    --color-ring-botoncar: theme("colors.yellow.300");
+
+    --color-fondo-icono: theme("colors.gray.200");
+    --color-icono: theme("colors.neutral.700");
+    --color-shadow-icono: theme("colors.gray.400");
+
+}
+
+.theme-dark {
+
+    --color-background-principal: theme("colors.neutral.800");
+    --color-texto-principal: theme("colors.white");
+
+    --color-fondo-header-form: theme("colors.neutral.600");
+    --color-fondo-form: theme("colors.neutral.700");
+    --color-texto-form: theme("colors.white");
+
+    --color-label: theme("colors.zinc.300");
+
+    --color-fondo-card: theme("colors.neutral.600");
+    --color-texto-card: theme("colors.green.500");
+    --color-border-card: theme("colors.neutral.600");
+
+
+    --bg-navlink: theme("colors.neutral.900");
+    --color-navlink: theme("colors.neutral.300");
+    --hoverbg-navlink: theme("colors.neutral.700");
+    --hovercolor-navlink: theme("colors.white");
+    --ring-navlink: theme("colors.white");
+
+    --color-boton-lg: theme("colors.white");
+    --color-hoverboton-lg: theme("colors.neutral.800");
+    --color-textoboton-lg: theme("colors.neutral.800");
+    --color-fondotextoboton-lg: theme("colors.white");
+
+    --color-fondo-titulo: theme("colors.neutral.700");
+    --color-texto-titulo: theme("colors.neutral.100");
+
+    --color-fondo-span: theme("colors.neutral.300");
+    --color-texto-span: theme("colors.neutral.800");
+
+    --color-fondo-boton: theme("colors.blue.500");
+    --color-hover-boton: theme("colors.blue.700");
+    --color-texto-boton: theme("colors.white");
+    --color-hover-textoboton: theme("colors.neutral.100");
+    --color-ring-boton: theme("colors.blue.300");
+
+    --color-checkbox: theme("colors.gray.500");
+
+    --bg-header-tabla: theme("colors.neutral.300");
+    --color-header-tabla: theme("colors.neutral.700");
+    --bg-fondo-tabla: theme("colors.neutral.600");
+    --color-texto-tabla: theme("colors.white");
+    --bg-hover-tabla: theme("colors.neutral.700");
+    --color-hover-tabla: theme("colors.white");
+
+    --color-fondo-botoncar: theme("colors.yellow.500");
+    --color-hover-botoncar: theme("colors.yellow.700");
+    --color-texto-botoncar: theme("colors.gray.100");
+    --color-ring-botoncar: theme("colors.yellow.300");
+
+    --color-fondo-icono: theme("colors.neutral.700");
+    --color-icono: theme("colors.white");
+    --color-shadow-icono: theme("colors.neutral.500");
+
+    --fondo-header-modal: theme("colors.neutral.700");
+    --color-header-modal: theme("colors.white");
+    --fondo-modal: theme("colors.neutral.600");
+    --color-modal: theme("colors.white");
+}
+
+.content {
+    animation: moving .5s ease;
+}
+
+@keyframes moving {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.tab_btn.active,
+.tab_btn_principal.active {
+    @apply text-white font-bold !important;
+}
+
+.content.active,
+.content_principal.active {
+    @apply block;
+}
